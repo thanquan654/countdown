@@ -1,0 +1,114 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Merienda', cursive;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-chinese-new-year-lantern-festival-cloud-background-design-year-backgroundpig-year-image_79843.jpg);
+  background-size: cover;
+  
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap: 20px;
+    /* background-color: #ff3647c4; */
+}
+
+.title, span {
+    font-size: xxx-large;
+    font-weight: 900;
+    color: rgb(230, 37, 37);
+    text-align: center;
+}
+span {
+    font-size: xx-large;
+    font-weight: 300;
+}
+
+.time {
+    display: flex;
+    gap: 25px;
+}
+.time-ele-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    /* background-image: repeating-linear-gradient(
+        to right bottom,
+        #7a7a7a 0px, #7a7a7a 1px,
+        transparent 1px, transparent 8px
+    ); */
+    background-image: url(https://previews.123rf.com/images/meikis/meikis1309/meikis130900008/22425874-oriental-chinese-lantern-cherry-blossom-background.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+/* .time-ele-container::before,
+.time-ele-container::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 25px;
+    background-color: #000;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+} */
+.time-ele-container::after {
+    left: unset;
+    right: 0;
+}
+#day, #hour, #minute, #second {
+    font-size: xxx-large;
+    font-weight: 600;
+    margin-bottom: -15px;
+}
+
+.flower {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url(./flower.png);
+    background-size: cover;
+    animation: flower-fall 2s ease-in infinite;
+}
+@keyframes flower-fall {
+    0% {
+        transform: translate(0,0);
+        opacity: 0.8;
+    }50% {
+        opacity: 1;
+    } 100% {
+        transform: translate(100px, 100vh);
+        opacity: .8;
+    }
+}
