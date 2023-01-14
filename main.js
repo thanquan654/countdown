@@ -1,4 +1,4 @@
-const endDate = new Date("01/15/2023 00:00:00").getTime()
+const endDate = new Date("01/22/2023 00:00:00").getTime()
 checkTime = setInterval(() => {
     const now = new Date().getTime()
     const distant = endDate - now
