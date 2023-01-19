@@ -24,6 +24,7 @@ body {
   background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-chinese-new-year-lantern-festival-cloud-background-design-year-backgroundpig-year-image_79843.jpg);
   background-size: cover;
   user-select: none;
+  background-position: center;
 }
 
 .container {
@@ -53,6 +54,12 @@ span {
 
 .time {
   display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
   gap: 25px;
 }
 .time-ele-container {
@@ -163,5 +170,23 @@ span {
     opacity: 1;
     width: 200px;
     height: unset;
+  }
+}
+
+/* ? Responsive */
+
+@media screen and (max-width: 767.98px) {
+  .time {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .time-ele-container {
+    flex: 1;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
   }
 }
