@@ -128,51 +128,6 @@ span {
   }
 }
 
-.info {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  cursor: pointer;
-  z-index: 3;
-}
-.info-btn {
-  width: 40px;
-  height: 40px;
-  /* border: 2px solid #fff; */
-  background-color: transparent;
-  font-size: 20px;
-  text-align: center;
-  line-height: 40px;
-  color: #fff;
-}
-.info-btn:hover ~ .info-content {
-  display: block !important;
-}
-.info-content {
-  display: none;
-  position: absolute;
-  top: 0;
-  transform: translate(-25%, -100%);
-  width: 200px;
-  /* height: 500px; */
-  background-color: #fff;
-  border: 1px solid red;
-  animation: showContent 1s ease-in forwards;
-  transform-origin: bottom center;
-}
-@keyframes showContent {
-  from {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  to {
-    opacity: 1;
-    width: 200px;
-    height: unset;
-  }
-}
-
 /* ? Responsive */
 
 @media screen and (max-width: 767.98px) {
